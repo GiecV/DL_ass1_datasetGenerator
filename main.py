@@ -30,7 +30,7 @@ def addRandomNumbers(amount):
 def isPalyndrome(a):
 
     while(len(a) < 6):
-        return "error"
+        return "-1"
 
     first = 0
     middle = (len(a) - 1) / 2
@@ -41,9 +41,9 @@ def isPalyndrome(a):
             first+=1
             last-=1
         else:
-            return "false"
+            return "0"
 
-    return "true"
+    return "1"
 
 
 
