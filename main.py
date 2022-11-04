@@ -19,12 +19,11 @@ def addPalyndromes(amount):
 
 def addRandomNumbers(amount):
     numbers = []
-
     for i in range(amount):
-        d1, d2, d3, d4, d5, d6 = random.sample(range(1, 9), 6)
-        number = str(d1) + str(d2) + str(d3) + str(d4) + str(d5) + str(d6)
-        numbers.append(number)
-
+        n = str(random.randint(1, 999999))
+        while(len(n) < 6):
+            n = '0' + n
+        numbers.append(n)
     return numbers
 
 def isPalyndrome(a):
@@ -45,13 +44,15 @@ def isPalyndrome(a):
 
     return "1"
 
-
+def binaryRange(numberOfBits):
+    numbers=[]
+    for number in range(2**numberOfBits):
+        numbers.append('{0:06b}'.format(number))
+    return numbers
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
 
-    numbers = []
-    numbers += addPalyndromes(32)
-    numbers += addRandomNumbers(32)
+    numbers = binaryRange(6)
     for n in numbers:
         print(n + ";" + isPalyndrome(n))
