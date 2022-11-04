@@ -50,9 +50,7 @@ def binaryRange(numberOfBits):
         numbers.append('{0:06b}'.format(number))
     return numbers
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-
     numbers = binaryRange(6)
     for n in numbers:
         print(n + ";" + isPalyndrome(n))
